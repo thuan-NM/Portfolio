@@ -24,7 +24,7 @@ export const education = [
     school: "CAN THO UNIVERSITY",
     period: "2021 - 2025",
     major: "Computer Science",
-    gpa: "3.4/4",
+    gpa: "3.41/4",
   },
   {
     school: "MINDX SCHOOL",

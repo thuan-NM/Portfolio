@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { projects } from "@/lib/data";
+import Image from "next/image";
 
 export default function ProjectsPage() {
   return (
@@ -20,7 +21,13 @@ export default function ProjectsPage() {
             <Card key={project.id} className="overflow-hidden bg-background/60 backdrop-blur-md">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="aspect-video w-full relative bg-accent/5 flex items-center justify-center">
-                  <span className="text-sm text-muted-foreground">Project Screenshot</span>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-fill"
+                    priority
+                  />
                 </div>
 
                 <div className="md:col-span-2 p-6">
