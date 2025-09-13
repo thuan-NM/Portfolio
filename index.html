@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Minh Thuan - Software Engineer</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="loading-logo">
+          <div class="logo-text">NMT</div>
+          <div class="logo-ring"></div>
+        </div>
+        <div class="loading-status">
+          <div class="loading-text">
+            <span class="text-gradient">Initializing</span>
+            <span class="dots">
+              <span>.</span><span>.</span><span>.</span>
+            </span>
+          </div>
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+        </div>
+      </div>
+      <div class="loading-background">
+        <canvas id="loading-canvas"></canvas>
+        <div class="gradient-overlay"></div>
+      </div>
+    </div>
+
+    <!-- Global Background -->
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">NMT</span>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="#home" class="nav-link" data-translate="nav.home">Home</a>
+          <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+          <a href="#skills" class="nav-link" data-translate="nav.skills"
+            >Skills</a
+          >
+          <a href="#experience" class="nav-link" data-translate="nav.experience"
+            >Experience</a
+          >
+          <a href="#projects" class="nav-link" data-translate="nav.projects"
+            >Projects</a
+          >
+          <a href="#contact" class="nav-link" data-translate="nav.contact"
+            >Contact</a
+          >
+        </div>
+
+        <div class="nav-controls">
+          <div class="language-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="vi">VI</button>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="global-background">
+      <canvas id="global-canvas"></canvas>
+      <div class="background-overlay"></div>
+    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="hero-text" data-aos="fade-up">
+          <h1 class="hero-title">
+            <span data-translate="hero.greeting">Hi, I'm</span>
+            <span class="name-highlight">Nguyen Minh Thuan</span>
+          </h1>
+          <div class="typing-text">
+            <span class="typing" id="typing-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-description" data-translate="hero.description">
+            Passionate Software Engineer specializing in full-stack development
+            with modern technologies
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="#contact"
+              class="btn-primary magnetic-btn"
+              data-translate="hero.contact"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="#projects"
+              class="btn-secondary magnetic-btn"
+              data-translate="hero.projects"
+            >
+              View My Work
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="fade-left">
+          <div class="floating-shapes">
+            <div class="network-shape">
+              <div class="network-lines"></div>
+              <div class="network-dots">
+                <!-- Network dots and connections will be generated here by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title" data-translate="about.title">About Me</h2>
+          <p class="section-subtitle" data-translate="about.subtitle">
+            Get to know more about who I am
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-text" data-aos="fade-right">
+            <p data-translate="about.description1">
+              I'm a passionate Software Engineer with experience in full-stack
+              development, specializing in modern web technologies and AI
+              integration. Currently pursuing my Bachelor's degree in Computer
+              Science at Can Tho University.
+            </p>
+            <p data-translate="about.description2">
+              I enjoy creating innovative solutions that combine cutting-edge
+              technology with user-centered design. My experience includes
+              working with ReactJS, Node.js, Golang, and AI technologies to build
+              scalable applications.
+            </p>
+
+            <div class="about-info">
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>thuannm.ws@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>0945362373</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-translate="about.location"
+                  >Can Tho City, Vietnam</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats" data-aos="fade-left">
+            <div class="stat-card tilt-card">
+              <div class="stat-number" data-count="3">0</div>
+              <div class="stat-label" data-translate="about.stats.projects">
+                Projects Completed
+              </div>
+            </div>
+            <div class="stat-card tilt-card">
+              <div class="stat-number" data-count="1">0</div>
+              <div class="stat-label" data-translate="about.stats.experience">
+                Years Experience
+              </div>
+            </div>
+            <div class="stat-card tilt-card">
+              <div class="stat-number" data-count="750">0</div>
+              <div class="stat-label" data-translate="about.stats.toeic">
+                TOEIC Score
+              </div>
+            </div>
+            <div class="stat-card tilt-card">
+              <div class="stat-number" data-count="3.47">0</div>
+              <div class="stat-label" data-translate="about.stats.gpa">GPA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title" data-translate="skills.title">
+            Skills & Technologies
+          </h2>
+          <p class="section-subtitle" data-translate="skills.subtitle">
+            My technical expertise
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Frontend Skills -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="category-title" data-translate="skills.frontend">
+              Frontend
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>ReactJS/NextJS</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="90"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>JavaScript/TypeScript</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="85"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>CSS3/Tailwind</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="88"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="category-title" data-translate="skills.backend">
+              Backend
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Golang</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="80"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Node.js/Express</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="85"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fas fa-database"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>MySQL/MongoDB</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="82"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools Skills -->
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="category-title" data-translate="skills.tools">
+              Tools & Others
+            </h3>
+            <div class="skill-cards">
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-git-alt"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Git/GitHub</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="90"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fab fa-docker"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>Docker</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="75"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-card hover-3d">
+                <div class="skill-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <div class="skill-info">
+                  <h4>AI/ML</h4>
+                  <div class="skill-progress">
+                    <div class="progress-bar" data-progress="70"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title" data-translate="experience.title">
+            Experience
+          </h2>
+          <p class="section-subtitle" data-translate="experience.subtitle">
+            My professional journey
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot pulse-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">May 2025 - Aug 2025</div>
+              <h3 data-translate="experience.teknix.title">
+                Front-End Developer
+              </h3>
+              <h4 data-translate="experience.teknix.company">
+                Teknix Corporation
+              </h4>
+              <ul>
+                <li data-translate="experience.teknix.desc1">
+                  Contributed to real-world web app project utilizing Refine,
+                  Next.js, and TypeScript
+                </li>
+                <li data-translate="experience.teknix.desc2">
+                  Integrated Refine with Directus to enhance backend setup and
+                  optimize content management
+                </li>
+                <li data-translate="experience.teknix.desc3">
+                  Developed dynamic UI components integrated with RESTful APIs
+                  from Directus
+                </li>
+                <li data-translate="experience.teknix.desc4">
+                  Applied Agile methodologies using Jira, Git to deliver
+                  features weekly
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot pulse-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Jan 2025 - Apr 2025</div>
+              <h3 data-translate="experience.fpt.title">
+                Intern Front-End Developer
+              </h3>
+              <h4 data-translate="experience.fpt.company">FPT Software</h4>
+              <ul>
+                <li data-translate="experience.fpt.desc1">
+                  Modernized legacy finance module with ReactJS and Golang,
+                  enhancing load times significantly
+                </li>
+                <li data-translate="experience.fpt.desc2">
+                  Developed expense management feature in COBOL for
+                  mainframe-based finance system
+                </li>
+                <li data-translate="experience.fpt.desc3">
+                  Gained experience in enterprise-grade systems and Agile
+                  development methodologies
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot pulse-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">Nov 2021 - Sep 2025</div>
+              <h3 data-translate="experience.education.title">
+                Bachelor of Computer Science
+              </h3>
+              <h4 data-translate="experience.education.company">
+                Can Tho University
+              </h4>
+              <ul>
+                <li data-translate="experience.education.desc1">
+                  Major in Computer Science with GPA 3.47
+                </li>
+                <li data-translate="experience.education.desc2">
+                  Thesis: "SMARTFORUMCICT: An Intelligent Learning Support Forum
+                  for Students"
+                </li>
+                <li data-translate="experience.education.desc3">
+                  Grade: 9.4/10
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title" data-translate="projects.title">
+            Featured Projects
+          </h2>
+          <p class="section-subtitle" data-translate="projects.subtitle">
+            Some of my recent work
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card flip-card" data-aos="zoom-in">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="project-image">
+                  <i class="fas fa-brain project-icon"></i>
+                </div>
+                <h3 data-translate="projects.smartforum.title">Smart Forum</h3>
+                <p data-translate="projects.smartforum.tech">
+                  ReactJS • Golang • MySQL • AI
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <h3 data-translate="projects.smartforum.title">Smart Forum</h3>
+                <p data-translate="projects.smartforum.desc">
+                  Intelligent forum platform with semantic search, RAG-based
+                  chatbot, and automated content moderation using AI
+                  technologies.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/thuan-NM/SMARTFORUMCICT"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card flip-card"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="project-image">
+                  <i class="fas fa-blog project-icon"></i>
+                </div>
+                <h3 data-translate="projects.blog.title">Katz Dev Blog</h3>
+                <p data-translate="projects.blog.tech">
+                  ReactJS • Node.js • MongoDB • WebRTC
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <h3 data-translate="projects.blog.title">Katz Dev Blog</h3>
+                <p data-translate="projects.blog.desc">
+                  Job search platform for students with smart filtering,
+                  real-time messaging, and video interview scheduling
+                  capabilities.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/thuan-NM/My-Blog-Frontend"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card flip-card"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="project-image">
+                  <i class="fas fa-book project-icon"></i>
+                </div>
+                <h3 data-translate="projects.library.title">
+                  Library Management
+                </h3>
+                <p data-translate="projects.library.tech">
+                  ReactJS • MongoDB • Ant Design
+                </p>
+              </div>
+              <div class="flip-card-back">
+                <h3 data-translate="projects.library.title">
+                  Library Management
+                </h3>
+                <p data-translate="projects.library.desc">
+                  Complete library management system with book cataloging,
+                  borrowing workflows, and responsive UI design.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/thuan-NM/Category_Management_FE"
+                    target="_blank"
+                    class="project-link"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title" data-translate="contact.title">
+            Get In Touch
+          </h2>
+          <p class="section-subtitle" data-translate="contact.subtitle">
+            Let's work together
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4 data-translate="contact.email.title">Email</h4>
+                <p>thuannm.ws@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4 data-translate="contact.phone.title">Phone</h4>
+                <p>+84 945362373</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4 data-translate="contact.location.title">Location</h4>
+                <p data-translate="contact.location.value">
+                  Can Tho City, Vietnam
+                </p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="http://www.linkedin.com/in/thuannguyen-ws"
+                target="_blank"
+                class="social-link magnetic-btn"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/thuan-NM"
+                target="_blank"
+                class="social-link magnetic-btn"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form" data-aos="fade-left">
+            <div class="form-group">
+              <div class="form-control">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">
+                  <i class="fas fa-user"></i>
+                  <span data-translate="contact.form.name">Your Name</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">
+                  <i class="fas fa-envelope"></i>
+                  <span data-translate="contact.form.email">Your Email</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  placeholder=" "
+                />
+                <label for="subject">
+                  <i class="fas fa-pen"></i>
+                  <span data-translate="contact.form.subject">Subject</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-control">
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="message">
+                  <i class="fas fa-comment"></i>
+                  <span data-translate="contact.form.message">
+                    Your Message
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div id="form-status" class="hidden"></div>
+
+            <button type="submit" class="submit-btn">
+              <span data-translate="contact.form.submit">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+              <!-- <div class="loading-spinner hidden"></div> -->
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>
+            &copy; 2025 Nguyen Minh Thuan.
+            <span data-translate="footer.rights">All rights reserved.</span>
+          </p>
+          <p data-translate="footer.made">
+            Made with ❤️ using modern web technologies
+          </p>
+        </div>
+      </div>
+    </footer> -->
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/global-background.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/network-effect.js"></script>
+  </body>
+</html>
