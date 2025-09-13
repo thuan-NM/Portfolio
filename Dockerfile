@@ -6,7 +6,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the static files from the project to the nginx web server directory
 COPY index.html /usr/share/nginx/html/
-COPY js/ /usr/share/nginx/html/js/
+COPY public/js/ /usr/share/nginx/html/js/
 COPY styles/ /usr/share/nginx/html/styles/
 COPY src/ /usr/share/nginx/html/src/
 
