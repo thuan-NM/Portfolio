@@ -2,10 +2,11 @@
 
 // EmailJS configuration - Thay thế bằng thông tin thực tế của bạn
 const emailJsConfig = {
-  serviceId: import.meta.env.VITE_YOUR_SERVICE_ID,
-  templateId: import.meta.env.VITE_YOUR_TEMPLATE_ID,
-  publicKey: import.meta.env.VITE_YOUR_PUBLIC_KEY,
+  serviceId: window.__EMAILJS_CONFIG__.YOUR_SERVICE_ID,
+  templateId: window.__EMAILJS_CONFIG__.YOUR_TEMPLATE_ID,
+  publicKey: window.__EMAILJS_CONFIG__.YOUR_PUBLIC_KEY,
 };
+
 
 const setupContactForm = () => {
   const form = document.getElementById('contact-form');

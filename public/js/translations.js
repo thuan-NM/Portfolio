@@ -91,7 +91,7 @@ const translations = {
             },
             location: {
                 title: "Location",
-                value: "Can Tho City, Vietnam"
+                value: "Ho Chi Minh City, Vietnam"
             },
             form: {
                 name: "Your Name",
